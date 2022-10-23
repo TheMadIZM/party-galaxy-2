@@ -1,4 +1,4 @@
-function TitleScreen() {
+function TitleScreen () {
     effects.confetti.startScreenEffect()
     game.splash("WELCOME TO", "PARTY GALAXY")
     game.showLongText("CONTROLS: W,A,S,D/ARROWS - DIRECRIONS, Z/SPACE - SHOOT", DialogLayout.Bottom)
@@ -7,8 +7,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(assets.image`myImage0`, ship, 0, -140)
     projectile.startEffect(effects.trail, 2000)
     animation.runImageAnimation(
-        projectile,
-        [img`
+    projectile,
+    [img`
         . . . . . . . 2 2 2 . . . . . . 
         . . . . . . . 2 4 2 . . . . . . 
         . . . . . . 2 2 4 2 2 . . . . . 
@@ -25,7 +25,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . 2 2 4 2 2 . . . . . 
         . . . . . . . 2 4 2 . . . . . . 
         . . . . . . . 2 2 2 . . . . . . 
-        `, img`
+        `,img`
         . . . . . . . 4 4 4 . . . . . . 
         . . . . . . . 4 5 4 . . . . . . 
         . . . . . . 4 4 5 4 4 . . . . . 
@@ -42,7 +42,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . 4 4 5 4 4 . . . . . 
         . . . . . . . 4 5 4 . . . . . . 
         . . . . . . . 4 4 4 . . . . . . 
-        `, img`
+        `,img`
         . . . . . . . 5 5 5 . . . . . . 
         . . . . . . . 5 1 5 . . . . . . 
         . . . . . . 5 5 1 5 5 . . . . . 
@@ -59,7 +59,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . 5 5 1 5 5 . . . . . 
         . . . . . . . 5 1 5 . . . . . . 
         . . . . . . . 5 5 5 . . . . . . 
-        `, img`
+        `,img`
         . . . . . . . . 1 . . . . . . . 
         . . . . . . . 1 2 1 . . . . . . 
         . . . . . . . 1 2 1 . . . . . . 
@@ -77,8 +77,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . 1 2 1 . . . . . . 
         . . . . . . . 1 1 1 . . . . . . 
         `],
-        100,
-        true
+    100,
+    true
     )
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite2, otherSprite2) {
@@ -96,11 +96,11 @@ let projectile: Sprite = null
 let ship: Sprite = null
 TitleScreen()
 let asteroids = [
-    assets.image`myImage4`,
-    assets.image`myImage3`,
-    assets.image`myImage2`,
-    assets.image`myImage5`,
-    img`
+assets.image`myImage4`,
+assets.image`myImage3`,
+assets.image`myImage2`,
+assets.image`myImage5`,
+img`
     . . . . . . . . . . . . . . . . 
     . . . . . . f f f f . . . . . . 
     . . . . . f 7 1 3 3 f . . . . . 
@@ -121,8 +121,8 @@ let asteroids = [
 ]
 ship = sprites.create(assets.image`myImage`, SpriteKind.Player)
 animation.runImageAnimation(
-    ship,
-    [img`
+ship,
+[img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -155,7 +155,7 @@ animation.runImageAnimation(
     ....fccccccccccccccccccccccf....
     ....fccccccccccccccccccccccf....
     ....ffffffffffffffffffffffff....
-    `, img`
+    `,img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -188,7 +188,7 @@ animation.runImageAnimation(
     .......ffccccccccccccccccccf....
     .......fcccccccccccccccccccf....
     .......fffffffffffffffffffff....
-    `, img`
+    `,img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -221,7 +221,7 @@ animation.runImageAnimation(
     ........ffcccccccccccccccccf....
     ........fccccccccccccccccccf....
     ........ffffffffffffffffffff....
-    `, img`
+    `,img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -254,7 +254,7 @@ animation.runImageAnimation(
     ........fccccccccccccccccccf....
     ........fccccccccccccccccccf....
     ........ffffffffffffffffffff....
-    `, img`
+    `,img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -287,7 +287,7 @@ animation.runImageAnimation(
     ....fccccccccccccccccccccccf....
     ....fccccccccccccccccccccccf....
     ....ffffffffffffffffffffffff....
-    `, img`
+    `,img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -320,7 +320,7 @@ animation.runImageAnimation(
     ....fccccccccccccccccccf........
     ....fccccccccccccccccccf........
     ....ffffffffffffffffffff........
-    `, img`
+    `,img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -353,7 +353,7 @@ animation.runImageAnimation(
     ....fcccccccccccccccccff........
     ....fccccccccccccccccccf........
     ....ffffffffffffffffffff........
-    `, img`
+    `,img`
     .........ffffffffffffff.........
     ........fccccccccccccccf........
     ........8888888888888888........
@@ -387,8 +387,8 @@ animation.runImageAnimation(
     ....fcccccccccccccccccccf.......
     ....fffffffffffffffffffff.......
     `],
-    100,
-    true
+100,
+true
 )
 ship.setStayInScreen(true)
 ship.bottom = 120
