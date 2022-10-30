@@ -395,7 +395,7 @@ ship.bottom = 120
 controller.moveSprite(ship, 100, 100)
 info.setLife(3)
 effects.blizzard.startScreenEffect()
-game.onUpdateInterval(20, function () {
+game.onUpdateInterval(250, function () {
     projectile = sprites.createProjectileFromSide(asteroids[randint(0, asteroids.length - 1)], 0, 75)
     projectile.setKind(SpriteKind.Enemy)
     projectile.x = randint(10, 150)
