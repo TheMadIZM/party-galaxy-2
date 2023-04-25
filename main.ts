@@ -1,7 +1,10 @@
 function TitleScreen () {
     effects.confetti.startScreenEffect()
-    game.splash("WELCOME TO", "PARTY GALAXY")
-    game.showLongText("CONTROLS: W,A,S,D/ARROWS - DIRECRIONS, Z/SPACE - SHOOT", DialogLayout.Bottom)
+    game.splash("🗿 PARTY 🗿 GALAXY 🗿")
+    game.showLongText("CONTROLS: W,A,S,D/ARROWS - DIRECRIONS", DialogLayout.Bottom)
+    game.showLongText("Z/SPACE - SHOOT", DialogLayout.Bottom)
+    game.showLongText("FOR MOBILE DEVICES: DOUBLE TAP CONTROLLER TO ACTIVATE FULL SCREEN MODE", DialogLayout.Bottom)
+    game.splash("PRESS ANY BUTTON TO START!")
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(assets.image`myImage0`, ship, 0, -140)
